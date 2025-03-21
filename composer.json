@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hafizulislamhfz\\DyToasst\\": "src/"
+            "Hafizulislamhfz\\DyToast\\": "src/"
         },
         "files": [
             "src/Helpers/toast.php"
