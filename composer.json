@@ -1,6 +1,6 @@
 {
     "name": "hafizulislamhfz/dy-toast",
-    "description": "A customizable toast notification package for Laravel",
+    "description": "A dynamic toast notification package for Laravel",
     "type": "package",
     "license": "MIT",
     "autoload": {
@@ -24,7 +24,6 @@
             "email": "hafizulislamhfz@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {}
 }

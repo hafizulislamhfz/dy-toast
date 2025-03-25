@@ -6,32 +6,63 @@ namespace Hafizulislamhfz\DyToast;
 
 class ToastManager
 {
-    public function success(string $message, int $timeout = 5000): void
+    /**
+     * Show a success toast.
+     *
+     * @param  string  $message  The message to display.
+     * @param  int  $timeout  The timeout duration in milliseconds, defaults to `config('dytoast.default_timeout')` if not provided.
+     */
+    public function success(string $message, ?int $timeout = null): void
     {
         $this->flash($message, 'success', $timeout);
     }
 
-    public function error(string $message, int $timeout = 5000): void
+    /**
+     * Show an error toast.
+     *
+     * @param  string  $message  The message to display.
+     * @param  int  $timeout  The timeout duration in milliseconds, defaults to `config('dytoast.default_timeout')` if not provided.
+     */
+    public function error(string $message, ?int $timeout = null): void
     {
         $this->flash($message, 'error', $timeout);
     }
 
-    public function warning(string $message, int $timeout = 5000): void
+    /**
+     * Show a warning toast.
+     *
+     * @param  string  $message  The message to display.
+     * @param  int  $timeout  The timeout duration in milliseconds, defaults to `config('dytoast.default_timeout')` if not provided.
+     */
+    public function warning(string $message, ?int $timeout = null): void
     {
         $this->flash($message, 'warning', $timeout);
     }
 
-    public function info(string $message, int $timeout = 5000): void
+    /**
+     * Show an info toast.
+     *
+     * @param  string  $message  The message to display.
+     * @param  int  $timeout  The timeout duration in milliseconds, defaults to `config('dytoast.default_timeout')` if not provided.
+     */
+    public function info(string $message, ?int $timeout = null): void
     {
         $this->flash($message, 'info', $timeout);
     }
 
-    private function flash(string $message, string $type, int $timeout): void
+    /**
+     * Flash the toast message to the session.
+     *
+     * @param  string  $message  The message to display.
+     * @param  string  $type  The type of toast (success, error, warning, info).
+     * @param  int|null  $timeout  The timeout duration in milliseconds (used config value if null).
+     */
+    private function flash(string $message, string $type, ?int $timeout): void
     {
         session()->flash('toast', [
             'message' => $message,
             'type' => $type,
-            'timeout' => $timeout,
+            'timeout' => $timeout ?? config('dytoast.default_timeout', 5000),
         ]);
     }
 }

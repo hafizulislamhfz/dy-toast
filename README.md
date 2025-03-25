@@ -1,6 +1,6 @@
-# dy-toast
+# DyToast
 
-A simple toast notification package for Laravel.
+A dynamic toast notification package for Laravel.
 ## Installation
 
 Install the package using Composer:
@@ -9,10 +9,10 @@ Install the package using Composer:
 composer require hafizulislamhfz/dy-toast
 ```
 
-After installed, publish the toast component:
+After installed, publish the toast resources:
 
 ```bash
-php artisan vendor:publish --tag=toast
+php artisan dytoast:publish
 ```
 
 Modify Your app.blade.php (or Main Layout)
@@ -28,6 +28,8 @@ In the main layout file (resources/views/layouts/app.blade.php), add this before
     {{-- body --}}
 
     @include('components.dy-toast.toast')
+    {{-- or --}}
+    <x-dy-toast.toast />
 </body>
 </html>
 ```
@@ -65,18 +67,22 @@ Use the toast in script:
 <script>
     // Display a success message
     toast('Operation completed successfully!');
+    toast.success('Operation completed successfully!');
 
     // Display an error message
     toast('Something went wrong!', 'error');
+    toast.error('Something went wrong!');
 
     // Display a warning message
     toast('This is a warning!', 'warning');
+    toast.warning('This is a warning!');
 
     // Display an info message
     toast('Some useful information here!', 'info');
+    toast.info('Some useful information here!');
 </script>
 ```
 
 ## License
 
-This package is open-source software licensed under the [MIT license](LICENSE).
+DyToast is open-source software licensed under the [MIT license](LICENSE).
