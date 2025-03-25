@@ -10,10 +10,10 @@ if (! function_exists('toast')) {
      *
      * @param  string  $message  The toast message.
      * @param  string  $type  The toast type ('success', 'error', 'warning', 'info').
-     * @param  int  $timeout  Optional timeout in milliseconds (default: 5000).
+     * @param  int  $timeout  Optional timeout in milliseconds, defaults to `config('dytoast.default_timeout')` if not provided..
      */
-    function toast(string $message, string $type = 'success', int $timeout = 5000): void
+    function toast(string $message, string $type = 'success', ?int $timeout = null): void
     {
-        Toast::$type($message, $timeout);
+        Toast::$type($message, $timeout ?? config('dytoast.default_timeout', 5000));
     }
 }
