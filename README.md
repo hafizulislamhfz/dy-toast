@@ -16,7 +16,7 @@ php artisan dytoast:publish
 ```
 
 Modify Your app.blade.php (or Main Layout)
-In the main layout file (resources/views/layouts/app.blade.php), add this before ```</body>```
+In the main layout file (resources/views/layouts/app.blade.php). To ensure the toast system works correctly, you need to include the dy-toast component before any scripts or dynamic content that may trigger a toast.
 
 ```bash
 <!DOCTYPE html>
@@ -25,8 +25,7 @@ In the main layout file (resources/views/layouts/app.blade.php), add this before
     {{-- head --}}
 </head>
 <body>
-    {{-- body --}}
-
+    {{-- Load DyToast early to ensure it initializes before usage --}}
     @include('components.dy-toast.toast')
     {{-- or --}}
     <x-dy-toast.toast />
