@@ -82,6 +82,9 @@ Use the toast in script:
 </script>
 ```
 
+## Preview
+<img height="250" src="./art/preview.gif"  alt="DyToast Preview">
+
 ## License
 
 DyToast is open-source software licensed under the [MIT license](LICENSE).
