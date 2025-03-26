@@ -83,7 +83,7 @@ Use the toast in script:
 ```
 
 ## Preview
-<img height="250" src="./art/preview-gif.gif"  alt="DyToast Preview" style="border-radius: 5px;">
+<img height="250" src="./art/preview.gif"  alt="DyToast Preview" style="border-radius: 5px;">
 
 ## License
 
