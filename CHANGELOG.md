@@ -1,5 +1,10 @@
 # Release Notes
 
+## [v1.0.3]() - (2025-04-16)
+
+* Added new toast positions: center, top-center and bottom-center.
+* Code structure optimized for readability and maintainability.
+
 ## [v1.0.2]() - (2025-03-25)
 
 * Added support for custom toast positions (top-right, top-left, bottom-right, bottom-left).
