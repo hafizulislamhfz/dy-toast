@@ -7,8 +7,9 @@ return [
     |--------------------------------------------------------------------------
     |
     | This option defines where the DyToast notification will be positioned
-    | on the screen. You can set it to values like 'top-left', 'top-right',
-    | 'bottom-right', 'bottom-left' to customize its position.
+    | on the screen. You can set it to values like 'center', 'top-center',
+    | 'top-left', 'top-right', 'bottom-center', 'bottom-right', 'bottom-left'
+    | to customize its position.
     |
     */
 
