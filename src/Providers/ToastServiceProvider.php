@@ -17,9 +17,6 @@ class ToastServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        // Include the helper functions file for toast
-        require_once __DIR__.'./../Helpers/toast.php';
-
         // Bind the ToastManager to the 'toast' key in the service container as a singleton.
         // This means only one instance of ToastManager will exist throughout the application's lifecycle.
         $this->app->singleton('toast', function () {
