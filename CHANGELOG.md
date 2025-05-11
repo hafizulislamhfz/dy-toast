@@ -1,5 +1,9 @@
 # Release Notes
 
+## [v1.0.4]() - (2025-05-11)
+
+* Removed duplicate helper file loading from the service provider.
+
 ## [v1.0.3]() - (2025-04-16)
 
 * Added new toast positions: center, top-center and bottom-center.
